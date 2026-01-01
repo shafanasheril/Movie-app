@@ -1,0 +1,173 @@
+/* =========================
+   HARD RESET (NO WHITE SPACE)
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: #000;
+  font-family: 'Cairo', sans-serif;
+  color: #fff;
+}
+
+/* =========================
+   BACK BUTTON
+   ========================= */
+.back-btn {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  z-index: 100;
+}
+
+.back-btn:hover {
+  color: #fff;
+}
+
+/* =========================
+   PAGE CONTAINER
+   ========================= */
+.container {
+  min-height: 100dvh; /* 🔥 FIXES MOBILE WHITE GAP */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 70px 40px 40px;
+  background: radial-gradient(circle at top, #222, #000);
+}
+
+/* =========================
+   MAIN WRAPPER
+   ========================= */
+.movie-detail {
+  width: 100%;
+}
+
+/* =========================
+   GRID LAYOUT (DESKTOP)
+   ========================= */
+.detail-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* =========================
+   POSTER
+   ========================= */
+.poster img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+}
+
+/* =========================
+   MOVIE INFO
+   ========================= */
+.info h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+/* META (⭐ ⏱ 📅) */
+.meta {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* LABELS */
+.info p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 6px 0;
+}
+
+.info b {
+  color: #e50914;
+}
+
+/* STORY */
+.plot {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 900px;
+  color: #e6e6e6;
+}
+
+/* =========================
+   MOBILE PERFECT VIEW
+   ========================= */
+@media (max-width: 768px) {
+
+  .container {
+    min-height: 100dvh;
+    padding: 60px 14px 30px;
+    align-items: flex-start;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* POSTER */
+  .poster img {
+    max-width: 170px;
+    margin: 0 auto 6px;
+    display: block;
+    border-radius: 14px;
+  }
+
+  /* TITLE */
+  .info h1 {
+    font-size: 1.75rem;
+    text-align: center;
+    margin: 6px 0 8px;
+  }
+
+  /* META */
+  .meta {
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* INFO TEXT */
+  .info p {
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 4px 0;
+  }
+
+  /* STORY */
+  .plot {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-top: 10px;
+    padding: 0 6px;
+    text-align: center;
+  }
+
+  /* BACK BUTTON */
+  .back-btn {
+    font-size: 0.85rem;
+  }
+}
