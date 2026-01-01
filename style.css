@@ -861,7 +861,18 @@ a.movie-item:hover {
 
 @media only screen and (max-width: 850px) {
     .nav-search {
-        display: none;
+        display: flex;
+        position: absolute;
+        top: 60px; /* below navbar */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        background: #111;
+        z-index: 100;
+    }
+
+    .nav-search input {
+        width: 100%;
     }
 }
 
