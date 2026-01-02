@@ -588,31 +588,31 @@ a.movie-item:hover {
 
 /* NAV SEARCH */
 .nav-search {
-    display: flex;
-    align-items: center;
-    background: #111;
-    border-radius: 20px;
-    padding: 5px 12px;
-    margin-right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #111;
+  border-radius: 20px;
+  padding: 6px 12px;
 }
 
 .nav-search input {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: #fff;
-    width: 160px;
-    font-size: 0.9rem;
-}
-
-.nav-search input::placeholder {
-    color: #aaa;
+  flex: 1;                
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  min-width: 0;          
 }
 
 .nav-search i {
-    color: var(--main-color);
-    font-size: 1.2rem;
-    cursor: pointer;
+  flex-shrink: 0;        
+  color: var(--main-color);
+  font-size: 1.3rem;
+}
+
+.nav-search input {
+  font-size: 16px 
 }
 
 
@@ -875,6 +875,14 @@ a.movie-item:hover {
         width: 100%;
     }
 }
+
+@media (max-width: 850px) {
+  .nav-search {
+    width: 90%;
+    margin: auto;
+  }
+}
+
 
 
 
